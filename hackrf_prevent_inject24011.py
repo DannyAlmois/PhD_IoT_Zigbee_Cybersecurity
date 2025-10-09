@@ -76,7 +76,7 @@ def sniff_with_cc2531():
                 if header in HEADERS_TO_DETECT and MIN_PACKET_LENGTH <= packet_length <= MAX_PACKET_LENGTH:
                     detected_packets += 1
                     logging.warning(f"CC2531: Atklāts pakete ar garumu {packet_length} baits")
-                    jam_event.set()  # Запуск глушения
+                    jam_event.set()
     except Exception as e:
         logging.error(f"CC2531 kļuda: {e}")
     finally:
